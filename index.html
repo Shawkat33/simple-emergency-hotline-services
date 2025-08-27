@@ -61,9 +61,11 @@
 					</div>
 					<div class="copies">
 						<button
+							disabled
+							id="copyStatBtn"
 							class="rounded-full secondaryGreen px-8 py-3 text-white text-[1rem]/[1.5rem] border-none font-bold"
 						>
-							<span id="copiedNo">2</span> Copy
+							<span id="copyStat">0</span> Copy
 						</button>
 					</div>
 				</div>
@@ -78,7 +80,7 @@
 					Government of the People’s Republic of Bangladesh
 				</h2>
 			</div>
-			<main class="primaryGreen">
+			<main class="primaryGreen min-h-screen">
 				<div class="px-5 md:px-8 xl:px-16 mx-auto py-[3rem]">
 					<div
 						id="cards"
@@ -132,25 +134,40 @@
 							id="callHistory"
 							class="callHistory bg-white rounded-xl w-full order-last md:row-start-1 md:col-start-2 lg:col-start-3 xl:col-start-4 md:row-end-3 xl:row-end-4"
 						>
-							<div class="callHistoryContent p-6">
+							<div class="callHistoryContent p-6 h-full">
 								<div
 									class="callHistoryNav flex flex-col lg:flex-row justify-between items-center mb-4"
 								>
-									<h2 class="text-lg md:text-xl lg:text-2xl font-medium">
-										<i class="fa-regular fa-clock"></i> Call history
+									<h2 class="text-lg md:text-xl 2xl:text-2xl font-medium">
+										<i class="fa-regular fa-clock text-gray-500"></i> Call
+										history
 									</h2>
 									<button
-										class="rounded-full secondaryGreen max-lg:mt-2 max-md:w-2/5 max-lg:w-full px-4 py-2 xl:py-3 text-white text-[1rem]/[1.5rem] border-none font-semibold cursor-pointer shadow-md hover:drop-shadow-md active:!bg-green-700"
+										id="callRecClr"
+										class="rounded-full secondaryGreen max-lg:mt-2 max-md:w-2/5 max-lg:w-full px-4 xl:px-6 py-2 text-white text-[1rem]/[1.5rem] border-none font-semibold cursor-pointer shadow-md hover:drop-shadow-md active:!bg-green-700"
 									>
 										Clear
 									</button>
 								</div>
 								<div
-									class="callHistoryDetail flex flex-col gap-2 overflow-scroll"
-								></div>
+									id="callRecords"
+									class="callHistoryDetail flex flex-col gap-3 overflow-y-scroll"
+								>
+									<div
+										class="mt-4 p-4 bg-[#FAFAFA] rounded-lg w-full flex justify-between hidden"
+									>
+										<div class="flex flex-col justify-around">
+											<h2 class="font-semibold text-lg text-[#111111]">
+												Fire Service Number
+											</h2>
+											<p class="text-[#818181]">999</p>
+										</div>
+										<div class="flex text-center items-center">
+											<h3 class="text-[#111111] text-lg">09:48 PM</h3>
+										</div>
+									</div>
+								</div>
 							</div>
-
-							<div class="record"></div>
 						</div>
 					</div>
 				</div>
