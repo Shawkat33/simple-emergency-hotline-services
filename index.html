@@ -47,21 +47,23 @@
 						<button
 							class="rounded-full primaryGreen px-5 py-3 font-black text-[1rem] border-none flex gap-3 items-center"
 						>
-							0 <img class="h-[1.875rem]" src="assets/heart.png" alt="" />
+							<span id="favorited">0</span>
+							<img class="h-[1.875rem]" src="assets/heart.png" alt="" />
 						</button>
 					</div>
 					<div class="coins">
 						<button
 							class="rounded-full primaryGreen px-5 py-3 font-black text-[1rem] border-none flex gap-3 items-center"
 						>
-							100 <img class="h-[1.875rem]" src="assets/coin.png" alt="" />
+							<span id="coins">100</span>
+							<img class="h-[1.875rem]" src="assets/coin.png" alt="" />
 						</button>
 					</div>
 					<div class="copies">
 						<button
 							class="rounded-full secondaryGreen px-8 py-3 text-white text-[1rem]/[1.5rem] border-none font-bold"
 						>
-							2 Copy
+							<span id="copiedNo">2</span> Copy
 						</button>
 					</div>
 				</div>
@@ -157,5 +159,6 @@
 
 		<script type="module" src="cards.js"></script>
 		<script type="module" src="info/info.js"></script>
+		<script type="module" src="event.js"></script>
 	</body>
 </html>
