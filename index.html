@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Tailwind CSS CDN -->
+
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+		<!-- Daisy UI CDN -->
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/daisyui@5"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+		<!-- Font Awesome Kit -->
+
+		<script
+			src="https://kit.fontawesome.com/417f4f932b.js"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Custom CSS -->
+
+		<link rel="stylesheet" href="Style/styles.css" />
+
+		<title>Emergency Helpline Services</title>
+	</head>
+	<body>
+		<div class="inter-font mx-auto">
+			<nav
+				class="px-5 md:px-8 xl:px-16 py-6 max-md:space-y-6 min-h-[6.25rem] flex justify-between flex-col md:flex-row items-center mx-auto"
+			>
+				<div class="logo flex items-center gap-[.625rem]">
+					<img class="h-[3.125rem]" src="./assets/logo.png" alt="" />
+					<h2 class="text-2xl/none font-black text-[#006747]">
+						Emergency<br />
+						Service
+					</h2>
+				</div>
+				<div class="stats flex gap-5">
+					<div class="favorites">
+						<button
+							class="rounded-full primaryGreen px-5 py-3 font-black text-[1rem] border-none flex gap-3 items-center"
+						>
+							0 <img class="h-[1.875rem]" src="assets/heart.png" alt="" />
+						</button>
+					</div>
+					<div class="coins">
+						<button
+							class="rounded-full primaryGreen px-5 py-3 font-black text-[1rem] border-none flex gap-3 items-center"
+						>
+							100 <img class="h-[1.875rem]" src="assets/coin.png" alt="" />
+						</button>
+					</div>
+					<div class="copies">
+						<button
+							class="rounded-full secondaryGreen px-8 py-3 text-white text-[1rem]/[1.5rem] border-none font-bold"
+						>
+							2 Copy
+						</button>
+					</div>
+				</div>
+			</nav>
+			<div
+				class="banner min-h-[14.9375rem] w-full bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col gap-[11px] justify-center items-center text-center text-white px-5 py-3"
+			>
+				<img class="h-[5.75rem] w-auto" src="assets/logo-dark.png" alt="" />
+				<h1 class="text-[1.875rem] font-bold">Emergency Service Directory</h1>
+				<h2 class="text-[1.25rem] font-semibold">
+					Government Emergency Services at Your Fingertip – A Project by
+					Government of the People’s Republic of Bangladesh
+				</h2>
+			</div>
+			<main class="primaryGreen">
+				<div class="px-5 md:px-8 xl:px-16 mx-auto py-[3rem]">
+					<div
+						id="cards"
+						class="w-full grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[1.875rem]"
+					>
+						<div class="card p-8 bg-white rounded-xl hidden">
+							<div class="cardContent">
+								<div class="cardNav flex justify-between items-center mb-4">
+									<div
+										class="serviceImage p-[.875rem] bg-[#FFE3E2] rounded-2xl"
+									>
+										<img class="h-8 w-8" src="assets/emergency.png" alt="" />
+									</div>
+									<i
+										class="fa-solid fa-heart text-2xl stroke-white text-red-200 transition-all transform duration-75 hover:scale-110 active:scale-125 active:text-red-600 hover:text-red-400"
+									></i>
+								</div>
+								<div class="cardDetail flex flex-col gap-6">
+									<div class="cardTitle">
+										<h3 class="title text-2xl font-bold">
+											National Emergency Number
+										</h3>
+										<p class="type text-lg text-gray-500">National Emergency</p>
+									</div>
+									<div class="serviceNumber">
+										<h2 class="text-3xl font-extrabold">999</h2>
+										<button
+											disabled
+											class="rounded-lg block bg-neutral-100 text-gray-400 px-4 mt-1"
+										>
+											All
+										</button>
+									</div>
+									<div class="cardBtn flex gap-2">
+										<button
+											class="w-full rounded-lg py-3 border-1 border-gray-300 cursor-pointer shadow-sm hover:shadow-md active:bg-neutral-100"
+										>
+											<i class="fa-regular fa-copy"></i> Copy
+										</button>
+										<button
+											class="text-white secondaryGreen w-full rounded-lg py-3 cursor-pointer shadow-sm hover:shadow-md active:!bg-green-700"
+										>
+											<i class="fa-solid fa-phone"></i> Call
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							id="callHistory"
+							class="callHistory bg-white rounded-xl w-full md:row-start-1 md:col-start-2 lg:col-start-3 xl:col-start-4 sm:row-end-2 md:row-end-3"
+						>
+							<div class="callHistoryContent p-6">
+								<div
+									class="callHistoryNav flex flex-col lg:flex-row justify-between items-center mb-4"
+								>
+									<h2 class="text-lg md:text-xl lg:text-2xl font-medium">
+										<i class="fa-regular fa-clock"></i> Call history
+									</h2>
+									<button
+										class="rounded-full secondaryGreen max-lg:mt-2 max-md:w-2/5 max-lg:w-full px-4 py-2 xl:py-3 text-white text-[1rem]/[1.5rem] border-none font-semibold cursor-pointer shadow-md hover:drop-shadow-md active:!bg-green-700"
+									>
+										Clear
+									</button>
+								</div>
+								<div
+									class="callHistoryDetail flex flex-col gap-2 overflow-scroll"
+								></div>
+							</div>
+
+							<div class="record"></div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<script type="module" src="cards.js"></script>
+		<script type="module" src="info/info.js"></script>
+	</body>
+</html>
