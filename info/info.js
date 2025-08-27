@@ -4,6 +4,7 @@ export const serviceDetailsEn = [
 		provider: "National Emergency",
 		number: "999",
 		category: "All",
+		bgCol: "bg-[#FFE3E2]",
 		imgLink: "./assets/emergency.png",
 	},
 	{
@@ -11,6 +12,7 @@ export const serviceDetailsEn = [
 		provider: "Police",
 		number: "999",
 		category: "Police",
+		bgCol: "bg-[#DFEFFF]",
 		imgLink: "./assets/police.png",
 	},
 	{
@@ -18,6 +20,7 @@ export const serviceDetailsEn = [
 		provider: "Fire Service",
 		number: "999",
 		category: "Fire",
+		bgCol: "bg-[#FFE3E2]",
 		imgLink: "./assets/fire-service.png",
 	},
 	{
@@ -25,6 +28,7 @@ export const serviceDetailsEn = [
 		provider: "Ambulance",
 		number: "1994 - 999999",
 		category: "Health",
+		bgCol: "bg-[#FFE3E2]",
 		imgLink: "./assets/ambulance.png",
 	},
 	{
@@ -32,6 +36,7 @@ export const serviceDetailsEn = [
 		provider: "Women & Child Helpline",
 		number: "109",
 		category: "Help",
+		bgCol: "bg-[#FFE3E2]",
 		imgLink: "./assets/emergency.png",
 	},
 	{
@@ -39,6 +44,7 @@ export const serviceDetailsEn = [
 		provider: "Anti-Corruption",
 		number: "106",
 		category: "Govt.",
+		bgCol: "bg-[#FFE3E2]",
 		imgLink: "./assets/emergency.png",
 	},
 	{
@@ -46,6 +52,7 @@ export const serviceDetailsEn = [
 		provider: "Electricity Outage",
 		number: "16216",
 		category: "Electricity",
+		bgCol: "bg-[#FFE3E2]",
 		imgLink: "./assets/emergency.png",
 	},
 	{
@@ -53,6 +60,7 @@ export const serviceDetailsEn = [
 		provider: "BRAC",
 		number: "16445",
 		category: "NGO",
+		bgCol: "bg-[#FFE3E2]",
 		imgLink: "./assets/emergency.png",
 	},
 	{
@@ -60,6 +68,7 @@ export const serviceDetailsEn = [
 		provider: "Bangladesh Railway",
 		number: "163",
 		category: "Travel",
+		bgCol: "bg-[#FFE3E2]",
 		imgLink: "./assets/emergency.png",
 	},
 ];

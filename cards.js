@@ -9,7 +9,7 @@ for (const service of serviceDetailsEn) {
 							<div class="cardContent flex flex-col justify-between space-y-2 max-md:space-y-4 h-full">
 								<div class="cardNav flex justify-between items-center mb-4">
 									<div
-										class="serviceImage p-[.875rem] bg-[#FFE3E2] rounded-2xl"
+										class="serviceImage p-[.875rem] ${service.bgCol} rounded-2xl"
 									>
 										<img class="h-8 w-8" src=${service.imgLink} alt="" />
 									</div>
