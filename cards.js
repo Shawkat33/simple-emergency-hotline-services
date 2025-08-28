@@ -13,9 +13,11 @@ for (const service of serviceDetailsEn) {
                                         >
                                             <img class="h-8 w-8" src=${service.imgLink} alt="" />
                                         </div>
-                                        <i
+                                        <i  
+                                            id="favoriteBtn"
                                             class="fa-solid fa-heart text-2xl stroke-white text-red-200 transition-all transform duration-75 hover:scale-110 active:scale-125 active:text-red-600 hover:text-red-400"
                                         ></i>
+                                        
                                     </div>
 								
 									<div class="cardTitle">

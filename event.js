@@ -1,18 +1,19 @@
 const callNowBtn = document.getElementById("callBtn");
 
-document.addEventListener("click", function (e) {
-	if (
-		e.target.tagName.toLowerCase() === "button" &&
-		e.target.id !== "callRecClr"
-	) {
-		const serviceDetail = {
-			title: "",
-			type: "",
-			number: 0,
-			copyStatus: false,
-			favoritedStatus: false,
-		};
+const serviceDetail = {
+	title: "",
+	type: "",
+	number: 0,
+	copyStatus: false,
+	favoritedStatus: false,
+};
 
+document.addEventListener("click", function (e) {
+	// console.log(e.target);
+	const btnConditions =
+		e.target.tagName.toLowerCase() === "button" && e.target.id !== "callRecClr";
+
+	if (btnConditions || e.target.id === "favoriteBtn") {
 		const clickedBtn = e.target.closest(".cardContent");
 
 		// console.log(e.target.id);
@@ -20,11 +21,11 @@ document.addEventListener("click", function (e) {
 		const cardTitle = clickedBtn.querySelector(".cardTitle .title").innerText;
 		const cardType = clickedBtn.querySelector(".cardTitle .type").innerText;
 		const cardNumber = clickedBtn.querySelector(".serviceNumber h2").innerText;
+		const favoriteBtnColor = clickedBtn.querySelector("#favoriteBtn");
+
 		serviceDetail.title = cardTitle;
 		serviceDetail.type = cardType;
 		serviceDetail.number = cardNumber;
-
-		// console.log(serviceDetail);
 
 		switch (e.target.id) {
 			case "callBtn":
@@ -36,29 +37,39 @@ document.addEventListener("click", function (e) {
 				break;
 
 			case "favoriteBtn":
-				favoriteBtn();
+				favoriteBtn(serviceDetail);
+
+				favoriteBtnColor.classList.add("!text-red-600");
 				break;
 
 			default:
 				break;
 		}
+		console.log(serviceDetail);
 	}
 
 	if (e.target.id === "callRecClr") {
 		callRecClr();
 	}
+
+	// if (e.target.id === "favoriteBtn") {
+	// 	console.log(e.target.id);
+
+	// 	favoriteBtn(serviceDetail);
+	// 	return;
+	// }
 });
 
 function callBtn(serviceDetail) {
 	const coins = parseInt(document.getElementById("coins").innerText);
 
 	if (coins < 20) {
-		alert("Insufficient Coin Balance, Please Recharge!");
+		alert("❌ Insufficient Coin Balance, Please Recharge!");
 	} else {
 		// Show alert --> Service and Number
 
 		alert(
-			`Calling ${serviceDetail.title} on ${serviceDetail.number} for 20 coins ...`
+			`📞 Calling ${serviceDetail.title} on ${serviceDetail.number} for 20 coins ...`
 		);
 
 		// Deduct coins
@@ -91,21 +102,21 @@ function copyBtn(serviceDetail) {
 		})
 		.catch((err) => console.log("Failed to copy!!! ", err));
 
+	//copyStat increment
+
+	const copyStat = parseInt(document.getElementById("copyStat").innerText);
+
+	const newCopyStat = copyStat + 1;
+	document.getElementById("copyStat").innerText = newCopyStat.toString();
+
+	// For Toggling
+
 	if (serviceDetail.copyStatus === true) {
 		return;
 	} else {
 		serviceDetail.copyStatus = !serviceDetail.copyStatus;
-
-		//copyStat increment
-
-		const copyStat = parseInt(document.getElementById("copyStat").innerText);
-
-		const newCopyStat = copyStat + 1;
-		document.getElementById("copyStat").innerText = newCopyStat.toString();
 	}
 }
-
-function favoriteBtn() {}
 
 function addRecord(record) {
 	const historyEl = document.createElement("div");
@@ -125,6 +136,23 @@ function addRecord(record) {
 
 	const callHistoryParent = document.getElementById("callRecords");
 	callHistoryParent.appendChild(historyEl);
+}
+
+function favoriteBtn(serviceDetail) {
+	// For Toggling
+
+	//copyStat increment
+
+	const favoritedNo = parseInt(document.getElementById("favorited").innerText);
+
+	const newFavoritedNo = favoritedNo + 1;
+	document.getElementById("favorited").innerText = newFavoritedNo.toString();
+
+	if (serviceDetail.favoritedStatus === true) {
+		return;
+	} else {
+		serviceDetail.favoritedStatus = !serviceDetail.favoritedStatus;
+	}
 }
 
 function callRecClr() {

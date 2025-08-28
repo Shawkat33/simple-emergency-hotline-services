@@ -32,8 +32,10 @@
 	</head>
 	<body>
 		<div class="inter-font mx-auto">
+			<!-- Navigation Bar Here -->
+
 			<nav
-				class="px-5 md:px-8 xl:px-16 py-6 max-md:space-y-6 min-h-[6.25rem] flex justify-between flex-col md:flex-row items-center mx-auto"
+				class="px-5 md:px-8 xl:px-16 py-6 max-md:space-y-6 min-h-[6.25rem] flex justify-between flex-col md:flex-row items-center mx-auto sticky top-0 z-50 shadow bg-white"
 			>
 				<div class="logo flex items-center gap-[.625rem]">
 					<img class="h-[3.125rem]" src="./assets/logo.png" alt="" />
@@ -70,6 +72,9 @@
 					</div>
 				</div>
 			</nav>
+
+			<!-- Banner Section Here -->
+
 			<div
 				class="banner min-h-[14.9375rem] w-full bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col gap-[11px] justify-center items-center text-center text-white px-5 py-3"
 			>
@@ -80,12 +85,17 @@
 					Government of the People’s Republic of Bangladesh
 				</h2>
 			</div>
+
+			<!-- Main Card & Call History Here -->
+
 			<main class="primaryGreen min-h-screen">
 				<div class="px-5 md:px-8 xl:px-16 mx-auto py-[3rem]">
 					<div
 						id="cards"
 						class="w-full grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[1.875rem]"
 					>
+						<!-- Cards Here -->
+
 						<div class="card p-8 bg-white rounded-xl hidden">
 							<div class="cardContent">
 								<div class="cardNav flex justify-between items-center mb-4">
@@ -130,6 +140,8 @@
 							</div>
 						</div>
 
+						<!-- Call History Here -->
+
 						<div
 							id="callHistory"
 							class="callHistory bg-white rounded-xl w-full order-last md:row-start-1 md:col-start-2 lg:col-start-3 xl:col-start-4 md:row-end-3 xl:row-end-4"
@@ -151,7 +163,7 @@
 								</div>
 								<div
 									id="callRecords"
-									class="callHistoryDetail flex flex-col gap-3 overflow-y-scroll"
+									class="callHistoryDetail flex flex-col gap-3"
 								>
 									<div
 										class="mt-4 p-4 bg-[#FAFAFA] rounded-lg w-full flex justify-between hidden"
