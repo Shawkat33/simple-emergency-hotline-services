@@ -45,7 +45,7 @@ document.addEventListener("click", function (e) {
 			default:
 				break;
 		}
-		console.log(serviceDetail);
+		// console.log(serviceDetail);
 	}
 
 	if (e.target.id === "callRecClr") {
