@@ -51,13 +51,6 @@ document.addEventListener("click", function (e) {
 	if (e.target.id === "callRecClr") {
 		callRecClr();
 	}
-
-	// if (e.target.id === "favoriteBtn") {
-	// 	console.log(e.target.id);
-
-	// 	favoriteBtn(serviceDetail);
-	// 	return;
-	// }
 });
 
 function callBtn(serviceDetail) {
